@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Priyadharshan S — Portfolio</title>
+<title>Priyadharshan  — Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
@@ -72,9 +72,10 @@ section{
 }
 .hero-name{
   font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(80px,10vw,150px);
+  font-size:clamp(48px,6vw,90px);
   line-height:0.92;letter-spacing:2px;
   color:#fff;margin-bottom:28px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 }
 .hero-name span{color:rgba(255,255,255,0.2);}
 .hero-desc{
@@ -536,18 +537,196 @@ section{
 
 /* Mobile hamburger */
 .mob-menu{display:none;}
-@media(max-width:900px){
-  nav{padding:18px 24px;}
-  .nav-links,.nav-btn{display:none;}
-  .mob-menu{display:block;background:none;border:none;color:#fff;font-size:24px;cursor:pointer;}
-  section{padding:0 24px!important;}
-  .sec-label{left:24px!important;}
-  .hero-inner,.about-inner,.course-inner,.intern-card,.cert-card,.contact-grid{grid-template-columns:1fr!important;gap:40px!important;}
-  .hero-name{font-size:72px!important;}
-  .about-heading,.edu-heading,.proj-heading,.course-heading,.intern-heading,.cert-heading,.contact-heading{font-size:56px!important;}
+
+/* TABLET (max 1024px) */
+@media(max-width:1024px){
+  nav{padding:16px 30px;}
+  .nav-links{gap:20px;}
+  .nav-links a{font-size:11px;}
+  section{padding:0 30px!important;}
+  .sec-label{left:30px!important;}
+  .hero-inner{grid-template-columns:1fr!important;gap:30px!important;padding-top:60px!important;}
+  .hero-photo-frame{max-width:100%;}
+  .hero-name{font-size:48px!important;}
+  .about-inner{grid-template-columns:1fr!important;gap:40px!important;}
+  .about-heading,.edu-heading,.proj-heading,.course-heading,.intern-heading,.cert-heading{font-size:48px!important;}
+  .contact-heading{font-size:72px!important;}
   .proj-grid{grid-template-columns:1fr!important;}
-  .scroll-hint{left:24px!important;}
-  .footer-strip{flex-direction:column;gap:8px;text-align:center;}
+  .intern-card{grid-template-columns:1fr!important;}
+  .cert-card{grid-template-columns:1fr!important;}
+  .intern-left{border-right:none;border-bottom:1px solid rgba(255,255,255,0.08);}
+  .course-inner{grid-template-columns:1fr!important;gap:40px!important;}
+  .contact-grid{grid-template-columns:1fr 1fr!important;gap:2px!important;}
+  .scroll-hint{left:30px!important;}
+  .footer-strip{flex-direction:column;gap:8px;text-align:center;padding:20px 30px;}
+}
+
+/* SMALL TABLET & LARGE MOBILE (768px - 1024px) */
+@media(max-width:900px){
+  nav{padding:14px 20px;}
+  .nav-links{gap:16px;}
+  .nav-links a{font-size:10px;}
+  .nav-btn{padding:8px 16px;font-size:10px;}
+  section{padding:0 20px!important;}
+  .sec-label{left:20px!important;font-size:9px;}
+  .hero-inner{grid-template-columns:1fr!important;gap:24px!important;padding-top:50px!important;}
+  .hero-name{font-size:44px!important;margin-bottom:20px!important;}
+  .hero-desc{font-size:15px;}
+  .hero-photo-frame{max-width:100%;}
+  .about-inner{grid-template-columns:1fr!important;gap:32px!important;}
+  .about-heading{font-size:44px!important;}
+  .about-stat{padding-left:20px;border-left-width:2px;}
+  .about-stat-num{font-size:48px;}
+  .edu-heading,.proj-heading,.course-heading,.intern-heading,.cert-heading{font-size:44px!important;}
+  .contact-heading{font-size:60px!important;}
+  .proj-grid{grid-template-columns:1fr!important;}
+  .proj-card{padding:32px;}
+  .proj-num{font-size:56px;}
+  .proj-title{font-size:20px;}
+  .intern-card{grid-template-columns:1fr!important;}
+  .intern-left{border-right:none;border-bottom:1px solid rgba(255,255,255,0.08);padding:32px 24px;}
+  .intern-right{padding:32px 24px;}
+  .cert-card{grid-template-columns:1fr!important;}
+  .cert-info-panel{padding:36px;}
+  .course-inner{grid-template-columns:1fr!important;gap:32px!important;}
+  .course-heading{font-size:44px!important;}
+  .contact-grid{grid-template-columns:1fr!important;gap:2px!important;}
+  .contact-tile{padding:32px;}
+  .github-tile{flex-direction:column;text-align:center;padding:32px;}
+  .github-tile-icon{font-size:40px;}
+  .github-tile-text h3{font-size:28px;}
+  .github-tile-arrow{margin-left:0;margin-top:auto;}
+  .scroll-hint{left:20px!important;}
+  .edu-row{grid-template-columns:80px 1fr!important;gap:24px!important;padding:24px 0!important;}
+  .footer-strip{flex-direction:column;gap:8px;text-align:center;padding:18px 20px;}
+}
+
+/* MOBILE (max 768px) */
+@media(max-width:768px){
+  nav{padding:12px 16px;}
+  .nav-links,.nav-btn{display:none;}
+  .mob-menu{display:block;background:none;border:none;color:#fff;font-size:24px;cursor:pointer;padding:4px;}
+  section{padding:0 16px!important;min-height:auto;}
+  .sec-label{left:16px!important;font-size:8px;display:none;}
+  .hero-inner{grid-template-columns:1fr!important;gap:20px!important;padding-top:40px!important;}
+  .hero-name{font-size:32px!important;line-height:0.92;margin-bottom:16px!important;}
+  .hero-sub{font-size:10px;margin-bottom:12px;}
+  .hero-desc{font-size:13px;margin-bottom:24px;}
+  .hero-actions{gap:12px;}
+  .btn-white,.btn-ghost{padding:10px 16px;font-size:10px;}
+  .hero-photo-frame{max-width:100%;aspect-ratio:3/4;}
+  .about-inner{grid-template-columns:1fr!important;gap:24px!important;}
+  .about-heading{font-size:36px!important;}
+  .about-text{font-size:13px;line-height:1.6;}
+  .about-stat{padding-left:16px;margin-bottom:16px;}
+  .about-stat-num{font-size:36px;}
+  .about-stat-label{font-size:10px;}
+  .about-langs{gap:8px;}
+  .lang-tag{font-size:10px;padding:6px 12px;}
+  .edu-heading,.proj-heading,.course-heading,.intern-heading,.cert-heading{font-size:36px!important;}
+  .contact-heading{font-size:48px!important;}
+  .proj-grid{grid-template-columns:1fr!important;}
+  .proj-card{padding:20px;}
+  .proj-num{font-size:40px;margin-bottom:8px;}
+  .proj-year-tag{font-size:9px;}
+  .proj-title{font-size:16px;margin-bottom:8px;}
+  .proj-desc{font-size:12px;margin-bottom:16px;}
+  .proj-tag{font-size:9px;padding:3px 8px;}
+  .edu-row{grid-template-columns:60px 1fr!important;gap:16px!important;padding:16px 0!important;}
+  .edu-year{font-size:18px;}
+  .edu-degree{font-size:16px;}
+  .edu-school{font-size:12px;}
+  .edu-pill{font-size:9px;padding:3px 10px;}
+  .subject-tag{font-size:10px;padding:4px 10px;}
+  .intern-card{grid-template-columns:1fr!important;}
+  .intern-left{border-right:none;border-bottom:1px solid rgba(255,255,255,0.08);padding:24px 16px;}
+  .intern-right{padding:24px 16px;}
+  .intern-company{font-size:24px;}
+  .intern-logo-box{width:40px;height:40px;font-size:20px;}
+  .ipl-text{font-size:12px;}
+  .cert-card{grid-template-columns:1fr!important;}
+  .cert-info-panel{padding:24px;}
+  .cert-badge{width:48px;height:48px;font-size:24px;}
+  .cert-title{font-size:28px;}
+  .course-inner{grid-template-columns:1fr!important;gap:24px!important;}
+  .course-heading{font-size:36px!important;}
+  .course-detail-box{padding:20px;}
+  .course-detail-title{font-size:16px;}
+  .course-detail-org{font-size:10px;}
+  .course-duration{font-size:10px;}
+  .course-desc-text{font-size:12px;}
+  .csk{font-size:10px;padding:4px 10px;}
+  .cp{font-size:12px;}
+  .contact-grid{grid-template-columns:1fr!important;gap:2px!important;}
+  .contact-tile{padding:20px;}
+  .ct-label{font-size:8px;}
+  .ct-icon{font-size:24px;}
+  .ct-value{font-size:14px;}
+  .github-tile{flex-direction:column;text-align:center;padding:24px;gap:16px;}
+  .github-tile-icon{font-size:32px;}
+  .github-tile-text h3{font-size:20px;}
+  .github-tile-text p{font-size:11px;}
+  .github-tile-arrow{margin-left:0;}
+  .scroll-hint{left:16px!important;display:none;}
+  .footer-strip{flex-direction:column;gap:8px;text-align:center;padding:16px;}
+  .footer-strip span{font-size:9px;}
+}
+
+/* SMALL MOBILE (max 480px) */
+@media(max-width:480px){
+  nav{padding:10px 12px;}
+  .nav-logo{font-size:20px;letter-spacing:2px;}
+  section{padding:0 12px!important;}
+  .hero-inner{padding-top:30px!important;gap:16px!important;}
+  .hero-name{font-size:24px!important;line-height:0.92;margin-bottom:12px!important;}
+  .hero-sub{font-size:9px;margin-bottom:8px;}
+  .hero-desc{font-size:12px;margin-bottom:16px;max-width:100%;}
+  .hero-actions{gap:8px;flex-direction:column;}
+  .btn-white,.btn-ghost{padding:8px 12px;font-size:9px;width:100%;}
+  .hero-photo-frame{aspect-ratio:3/4;}
+  .about-heading{font-size:28px!important;}
+  .about-stat-num{font-size:28px;}
+  .about-stat-label{font-size:9px;}
+  .about-text{font-size:12px;}
+  .edu-heading,.proj-heading,.course-heading,.intern-heading,.cert-heading{font-size:28px!important;}
+  .contact-heading{font-size:36px!important;}
+  .proj-card{padding:16px;}
+  .proj-num{font-size:32px;margin-bottom:4px;}
+  .proj-title{font-size:14px;margin-bottom:8px;}
+  .proj-desc{font-size:11px;margin-bottom:12px;}
+  .edu-row{grid-template-columns:50px 1fr!important;gap:12px!important;padding:12px 0!important;}
+  .edu-year{font-size:16px;}
+  .edu-degree{font-size:14px;margin-bottom:2px;}
+  .edu-school{font-size:11px;}
+  .intern-left{padding:16px 12px;}
+  .intern-right{padding:16px 12px;}
+  .intern-company{font-size:18px;}
+  .intern-logo-box{width:36px;height:36px;font-size:18px;margin-bottom:4px;}
+  .im{font-size:9px;}
+  .im strong{font-size:11px;margin-top:1px;}
+  .ipl-text{font-size:11px;}
+  .cert-info-panel{padding:16px;}
+  .cert-badge{width:40px;height:40px;font-size:20px;margin-bottom:16px;}
+  .cert-title{font-size:20px;margin-bottom:6px;}
+  .cert-issuer-line{font-size:10px;margin-bottom:16px;}
+  .cert-view-btn{font-size:10px;padding:10px 16px;}
+  .course-detail-box{padding:16px;}
+  .course-detail-title{font-size:14px;}
+  .course-detail-org{font-size:9px;}
+  .course-duration{font-size:9px;padding:5px 12px;}
+  .course-desc-text{font-size:11px;}
+  .course-heading{font-size:28px!important;}
+  .csk{font-size:9px;padding:3px 8px;}
+  .contact-tile{padding:16px;}
+  .ct-icon{font-size:20px;}
+  .ct-value{font-size:12px;}
+  .github-tile{padding:16px;gap:12px;}
+  .github-tile-icon{font-size:28px;}
+  .github-tile-text h3{font-size:16px;margin-bottom:2px;}
+  .github-tile-text p{font-size:10px;}
+  .divider{width:40px;margin-bottom:16px;}
+  .footer-strip{padding:12px;gap:4px;}
+  .footer-strip span{font-size:8px;}
 }
 </style>
 </head>
@@ -555,7 +734,7 @@ section{
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">PD</div>
+  <div class="nav-logo"></div>
   <ul class="nav-links">
     <li><a href="#hero">Home</a></li>
     <li><a href="#about">About</a></li>
@@ -576,7 +755,7 @@ section{
   <div class="hero-inner">
     <div>
       <p class="hero-sub">Computer Science Student &amp; Web Developer</p>
-      <h1 class="hero-name">PRIYA<br>DHARSHAN<br><span>S.</span></h1>
+      <h1 class="hero-name">PRIYADHARSHAN.S</h1>
       <p class="hero-desc">A passionate fresher building full-stack web apps and AI-powered systems. Seeking opportunities to grow and contribute in the tech industry.</p>
       <div class="hero-actions">
         <button class="btn-white" onclick="openResume()">View Resume ↗</button>
@@ -591,7 +770,7 @@ section{
       <div class="hero-photo-tag">Open to Work</div>
     </div>
   </div>
-  <div class="scroll-hint">Scroll to explore</div>
+  <div class="scroll-hint"></div>
 </section>
 
 <!-- ═══ 2. ABOUT ═══ -->
@@ -771,7 +950,7 @@ section{
 
 <!-- ═══ 7. CERTIFICATE ═══ -->
 <section id="certificate">
-  <div class="sec-label">/div>
+  <div class="sec-label"></div>
   <div class="cert-inner">
     <h2 class="cert-heading">CERTIFICATE</h2>
     <div class="cert-card">
@@ -826,7 +1005,7 @@ section{
       </div>
     </div>
     <a href="https://github.com/DHARSHAN12-eng" target="_blank" class="github-tile" style="margin-top:2px;display:flex;">
-      <div class="github-tile-icon">🐙</div>
+      <div class="github-tile-icon">💻</div>
       <div class="github-tile-text">
         <h3>github.com/DHARSHAN12-eng</h3>
         <p>Check out my projects and open source work on GitHub</p>
@@ -836,11 +1015,7 @@ section{
   </div>
 </section>
 
-<!-- FOOTER -->
-<div class="footer-strip">
-  <span>Priyadharshan S · Web Developer · 2026</span>
-  <span>Tamil Nadu, India</span>
-</div>
+
 
 <script>
 // Resume open
